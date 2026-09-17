@@ -1,0 +1,2 @@
+[console_scripts]
+leads-pipeline = pipeline.main:main

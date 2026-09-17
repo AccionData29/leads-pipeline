@@ -1,0 +1,19 @@
+{
+  "run_id": "e9402aca3a31",
+  "metrics": {
+    "training": {
+      "roc_auc_train": 0.6899511139382297,
+      "rows": 2200,
+      "positive_rate": 0.08954545454545454
+    },
+    "model_path": "data\\output\\scoring_model.joblib"
+  },
+  "counts": {
+    "leads": 1501,
+    "conversations": 677,
+    "enrichments": 677,
+    "scores": 1501,
+    "assignments": 694,
+    "duplicates": 280
+  }
+}
