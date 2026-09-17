@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#15324D" flood-opacity="0.12"/>
+  </filter>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#163A63"/>
+  </marker>
+</defs>
+<rect width="1600" height="900" fill="#F7F9FC"/>
+<rect x="0" y="0" width="1600" height="92" fill="#163A63"/>
+<text x="55" y="47" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">Enriquecimiento con IA y scoring</text>
+<text x="55" y="74" fill="#BBD6EC" font-family="Arial, Helvetica, sans-serif" font-size="15">La IA complementa reglas y modelos; el resultado queda trazable</text>
+<rect x="60" y="180" width="270" height="260" rx="16" fill="#FFFFFF" stroke="#163A63" stroke-width="2" filter="url(#shadow)"/>
+<rect x="60" y="180" width="270" height="52" rx="16" fill="#163A63"/>
+<rect x="60" y="218" width="270" height="14" fill="#163A63"/>
+<text x="80" y="213" fill="white" font-family="Arial" font-size="19" font-weight="700">Conversaciones</text>
+<circle cx="85" cy="258" r="4" fill="#163A63"/>
+<text x="100" y="264" fill="#19324D" font-family="Arial" font-size="16">Mensajes</text>
+<circle cx="85" cy="288" r="4" fill="#163A63"/>
+<text x="100" y="294" fill="#19324D" font-family="Arial" font-size="16">Canal</text>
+<circle cx="85" cy="318" r="4" fill="#163A63"/>
+<text x="100" y="324" fill="#19324D" font-family="Arial" font-size="16">Fechas</text>
+<circle cx="85" cy="348" r="4" fill="#163A63"/>
+<text x="100" y="354" fill="#19324D" font-family="Arial" font-size="16">Contexto</text><rect x="410" y="180" width="310" height="260" rx="16" fill="#FFFFFF" stroke="#159A6C" stroke-width="2" filter="url(#shadow)"/>
+<rect x="410" y="180" width="310" height="52" rx="16" fill="#159A6C"/>
+<rect x="410" y="218" width="310" height="14" fill="#159A6C"/>
+<text x="430" y="213" fill="white" font-family="Arial" font-size="19" font-weight="700">Enriquecimiento IA</text>
+<circle cx="435" cy="258" r="4" fill="#159A6C"/>
+<text x="450" y="264" fill="#19324D" font-family="Arial" font-size="16">Intención</text>
+<circle cx="435" cy="288" r="4" fill="#159A6C"/>
+<text x="450" y="294" fill="#19324D" font-family="Arial" font-size="16">Interés</text>
+<circle cx="435" cy="318" r="4" fill="#159A6C"/>
+<text x="450" y="324" fill="#19324D" font-family="Arial" font-size="16">Objeciones</text>
+<circle cx="435" cy="348" r="4" fill="#159A6C"/>
+<text x="450" y="354" fill="#19324D" font-family="Arial" font-size="16">Perfil</text>
+<circle cx="435" cy="378" r="4" fill="#159A6C"/>
+<text x="450" y="384" fill="#19324D" font-family="Arial" font-size="16">Señales</text><rect x="800" y="180" width="310" height="260" rx="16" fill="#FFFFFF" stroke="#7357C8" stroke-width="2" filter="url(#shadow)"/>
+<rect x="800" y="180" width="310" height="52" rx="16" fill="#7357C8"/>
+<rect x="800" y="218" width="310" height="14" fill="#7357C8"/>
+<text x="820" y="213" fill="white" font-family="Arial" font-size="19" font-weight="700">Scoring</text>
+<circle cx="825" cy="258" r="4" fill="#7357C8"/>
+<text x="840" y="264" fill="#19324D" font-family="Arial" font-size="16">Variables históricas</text>
+<circle cx="825" cy="288" r="4" fill="#7357C8"/>
+<text x="840" y="294" fill="#19324D" font-family="Arial" font-size="16">Modelo predictivo</text>
+<circle cx="825" cy="318" r="4" fill="#7357C8"/>
+<text x="840" y="324" fill="#19324D" font-family="Arial" font-size="16">Ajuste IA acotado</text>
+<circle cx="825" cy="348" r="4" fill="#7357C8"/>
+<text x="840" y="354" fill="#19324D" font-family="Arial" font-size="16">Score final</text><rect x="1190" y="180" width="310" height="260" rx="16" fill="#FFFFFF" stroke="#E88922" stroke-width="2" filter="url(#shadow)"/>
+<rect x="1190" y="180" width="310" height="52" rx="16" fill="#E88922"/>
+<rect x="1190" y="218" width="310" height="14" fill="#E88922"/>
+<text x="1210" y="213" fill="white" font-family="Arial" font-size="19" font-weight="700">Explicación</text>
+<circle cx="1215" cy="258" r="4" fill="#E88922"/>
+<text x="1230" y="264" fill="#19324D" font-family="Arial" font-size="16">Factores principales</text>
+<circle cx="1215" cy="288" r="4" fill="#E88922"/>
+<text x="1230" y="294" fill="#19324D" font-family="Arial" font-size="16">Evidencia</text>
+<circle cx="1215" cy="318" r="4" fill="#E88922"/>
+<text x="1230" y="324" fill="#19324D" font-family="Arial" font-size="16">Versión del modelo</text>
+<circle cx="1215" cy="348" r="4" fill="#E88922"/>
+<text x="1230" y="354" fill="#19324D" font-family="Arial" font-size="16">Trazabilidad</text><line x1="330" y1="310" x2="410" y2="310" stroke="#163A63" stroke-width="3" marker-end="url(#arrow)"/><line x1="720" y1="310" x2="800" y2="310" stroke="#163A63" stroke-width="3" marker-end="url(#arrow)"/><line x1="1110" y1="310" x2="1190" y2="310" stroke="#163A63" stroke-width="3" marker-end="url(#arrow)"/><rect x="430" y="590" width="740" height="120" rx="14" fill="#FFFFFF" stroke="#1976D2" stroke-width="2" filter="url(#shadow)"/>
+<text x="800.0" y="624" text-anchor="middle" fill="#1976D2" font-family="Arial" font-size="18" font-weight="700">Resultado analítico</text>
+<text x="800.0" y="652" text-anchor="middle" fill="#60758A" font-family="Arial" font-size="14">Lead enriquecido + score + explicación + versión de procesamiento</text><line x1="960" y1="440" x2="800" y2="590" stroke="#163A63" stroke-width="3" marker-end="url(#arrow)"/><line x1="1340" y1="440" x2="1170" y2="590" stroke="#163A63" stroke-width="3" marker-end="url(#arrow)"/></svg>

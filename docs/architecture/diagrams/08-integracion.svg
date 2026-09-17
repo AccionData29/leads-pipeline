@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#15324D" flood-opacity="0.12"/>
+  </filter>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#163A63"/>
+  </marker>
+</defs>
+<rect width="1600" height="900" fill="#F7F9FC"/>
+<rect x="0" y="0" width="1600" height="92" fill="#163A63"/>
+<text x="55" y="47" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">Integración Angular → .NET → Python → PostgreSQL</text>
+<text x="55" y="74" fill="#BBD6EC" font-family="Arial, Helvetica, sans-serif" font-size="15">Contratos explícitos y responsabilidades separadas</text>
+<rect x="70" y="180" width="300" height="250" rx="16" fill="#FFFFFF" stroke="#D94B4B" stroke-width="2" filter="url(#shadow)"/>
+<rect x="70" y="180" width="300" height="52" rx="16" fill="#D94B4B"/>
+<rect x="70" y="218" width="300" height="14" fill="#D94B4B"/>
+<text x="90" y="213" fill="white" font-family="Arial" font-size="19" font-weight="700">Angular</text>
+<circle cx="95" cy="258" r="4" fill="#D94B4B"/>
+<text x="110" y="264" fill="#19324D" font-family="Arial" font-size="16">UI</text>
+<circle cx="95" cy="288" r="4" fill="#D94B4B"/>
+<text x="110" y="294" fill="#19324D" font-family="Arial" font-size="16">Consulta de leads</text>
+<circle cx="95" cy="318" r="4" fill="#D94B4B"/>
+<text x="110" y="324" fill="#19324D" font-family="Arial" font-size="16">Ejecución / monitoreo</text>
+<circle cx="95" cy="348" r="4" fill="#D94B4B"/>
+<text x="110" y="354" fill="#19324D" font-family="Arial" font-size="16">Dashboards</text><rect x="460" y="180" width="330" height="250" rx="16" fill="#FFFFFF" stroke="#7357C8" stroke-width="2" filter="url(#shadow)"/>
+<rect x="460" y="180" width="330" height="52" rx="16" fill="#7357C8"/>
+<rect x="460" y="218" width="330" height="14" fill="#7357C8"/>
+<text x="480" y="213" fill="white" font-family="Arial" font-size="19" font-weight="700">.NET Backend</text>
+<circle cx="485" cy="258" r="4" fill="#7357C8"/>
+<text x="500" y="264" fill="#19324D" font-family="Arial" font-size="16">API REST</text>
+<circle cx="485" cy="288" r="4" fill="#7357C8"/>
+<text x="500" y="294" fill="#19324D" font-family="Arial" font-size="16">Casos de uso</text>
+<circle cx="485" cy="318" r="4" fill="#7357C8"/>
+<text x="500" y="324" fill="#19324D" font-family="Arial" font-size="16">Autorización</text>
+<circle cx="485" cy="348" r="4" fill="#7357C8"/>
+<text x="500" y="354" fill="#19324D" font-family="Arial" font-size="16">Persistencia / EF Core</text><rect x="880" y="180" width="330" height="250" rx="16" fill="#FFFFFF" stroke="#159A6C" stroke-width="2" filter="url(#shadow)"/>
+<rect x="880" y="180" width="330" height="52" rx="16" fill="#159A6C"/>
+<rect x="880" y="218" width="330" height="14" fill="#159A6C"/>
+<text x="900" y="213" fill="white" font-family="Arial" font-size="19" font-weight="700">Python Pipeline</text>
+<circle cx="905" cy="258" r="4" fill="#159A6C"/>
+<text x="920" y="264" fill="#19324D" font-family="Arial" font-size="16">Ingesta</text>
+<circle cx="905" cy="288" r="4" fill="#159A6C"/>
+<text x="920" y="294" fill="#19324D" font-family="Arial" font-size="16">Normalización</text>
+<circle cx="905" cy="318" r="4" fill="#159A6C"/>
+<text x="920" y="324" fill="#19324D" font-family="Arial" font-size="16">IA</text>
+<circle cx="905" cy="348" r="4" fill="#159A6C"/>
+<text x="920" y="354" fill="#19324D" font-family="Arial" font-size="16">Scoring</text>
+<circle cx="905" cy="378" r="4" fill="#159A6C"/>
+<text x="920" y="384" fill="#19324D" font-family="Arial" font-size="16">Assignment</text><rect x="1300" y="180" width="220" height="250" rx="16" fill="#FFFFFF" stroke="#1976D2" stroke-width="2" filter="url(#shadow)"/>
+<rect x="1300" y="180" width="220" height="52" rx="16" fill="#1976D2"/>
+<rect x="1300" y="218" width="220" height="14" fill="#1976D2"/>
+<text x="1320" y="213" fill="white" font-family="Arial" font-size="19" font-weight="700">PostgreSQL</text>
+<circle cx="1325" cy="258" r="4" fill="#1976D2"/>
+<text x="1340" y="264" fill="#19324D" font-family="Arial" font-size="16">Leads</text>
+<circle cx="1325" cy="288" r="4" fill="#1976D2"/>
+<text x="1340" y="294" fill="#19324D" font-family="Arial" font-size="16">Scores</text>
+<circle cx="1325" cy="318" r="4" fill="#1976D2"/>
+<text x="1340" y="324" fill="#19324D" font-family="Arial" font-size="16">Assignments</text>
+<circle cx="1325" cy="348" r="4" fill="#1976D2"/>
+<text x="1340" y="354" fill="#19324D" font-family="Arial" font-size="16">Runs</text><line x1="370" y1="305" x2="460" y2="305" stroke="#163A63" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="415.0" y="295.0" text-anchor="middle" fill="#60758A" font-family="Arial" font-size="13">HTTP</text><line x1="790" y1="305" x2="880" y2="305" stroke="#163A63" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="835.0" y="295.0" text-anchor="middle" fill="#60758A" font-family="Arial" font-size="13">HTTP interno</text><line x1="1210" y1="305" x2="1300" y2="305" stroke="#163A63" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="1255.0" y="295.0" text-anchor="middle" fill="#60758A" font-family="Arial" font-size="13">SQL</text><rect x="390" y="570" width="820" height="120" rx="14" fill="#FFFFFF" stroke="#E88922" stroke-width="2" filter="url(#shadow)"/>
+<text x="800.0" y="604" text-anchor="middle" fill="#E88922" font-family="Arial" font-size="18" font-weight="700">Contratos compartidos</text>
+<text x="800.0" y="632" text-anchor="middle" fill="#60758A" font-family="Arial" font-size="14">DTOs / esquemas: Lead, Customer, Motorcycle, Score, Assignment, PipelineRun</text>
+<text x="800.0" y="654" text-anchor="middle" fill="#60758A" font-family="Arial" font-size="14">Estados de ejecución: RUNNING / SUCCESS / FAILED</text><line x1="625" y1="430" x2="625" y2="570" stroke="#163A63" stroke-width="3" marker-end="url(#arrow)"/><line x1="1045" y1="430" x2="1045" y2="570" stroke="#163A63" stroke-width="3" marker-end="url(#arrow)"/></svg>

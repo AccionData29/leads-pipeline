@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#15324D" flood-opacity="0.12"/>
+  </filter>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#163A63"/>
+  </marker>
+</defs>
+<rect width="1600" height="900" fill="#F7F9FC"/>
+<rect x="0" y="0" width="1600" height="92" fill="#163A63"/>
+<text x="55" y="47" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">Calidad, normalización y deduplicación</text>
+<text x="55" y="74" fill="#BBD6EC" font-family="Arial, Helvetica, sans-serif" font-size="15">Transformar datos heterogéneos en un conjunto canónico confiable</text>
+<rect x="60" y="180" width="330" height="320" rx="16" fill="#FFFFFF" stroke="#7357C8" stroke-width="2" filter="url(#shadow)"/>
+<rect x="60" y="180" width="330" height="52" rx="16" fill="#7357C8"/>
+<rect x="60" y="218" width="330" height="14" fill="#7357C8"/>
+<text x="80" y="213" fill="white" font-family="Arial" font-size="19" font-weight="700">Normalización</text>
+<circle cx="85" cy="258" r="4" fill="#7357C8"/>
+<text x="100" y="264" fill="#19324D" font-family="Arial" font-size="16">Trim / casing</text>
+<circle cx="85" cy="288" r="4" fill="#7357C8"/>
+<text x="100" y="294" fill="#19324D" font-family="Arial" font-size="16">Fechas canónicas</text>
+<circle cx="85" cy="318" r="4" fill="#7357C8"/>
+<text x="100" y="324" fill="#19324D" font-family="Arial" font-size="16">Teléfonos</text>
+<circle cx="85" cy="348" r="4" fill="#7357C8"/>
+<text x="100" y="354" fill="#19324D" font-family="Arial" font-size="16">Correos</text>
+<circle cx="85" cy="378" r="4" fill="#7357C8"/>
+<text x="100" y="384" fill="#19324D" font-family="Arial" font-size="16">Estados</text><rect x="475" y="180" width="330" height="320" rx="16" fill="#FFFFFF" stroke="#1976D2" stroke-width="2" filter="url(#shadow)"/>
+<rect x="475" y="180" width="330" height="52" rx="16" fill="#1976D2"/>
+<rect x="475" y="218" width="330" height="14" fill="#1976D2"/>
+<text x="495" y="213" fill="white" font-family="Arial" font-size="19" font-weight="700">Catalog matching</text>
+<circle cx="500" cy="258" r="4" fill="#1976D2"/>
+<text x="515" y="264" fill="#19324D" font-family="Arial" font-size="16">Exact match</text>
+<circle cx="500" cy="288" r="4" fill="#1976D2"/>
+<text x="515" y="294" fill="#19324D" font-family="Arial" font-size="16">Fuzzy matching</text>
+<circle cx="500" cy="318" r="4" fill="#1976D2"/>
+<text x="515" y="324" fill="#19324D" font-family="Arial" font-size="16">Umbral de confianza</text>
+<circle cx="500" cy="348" r="4" fill="#1976D2"/>
+<text x="515" y="354" fill="#19324D" font-family="Arial" font-size="16">SKU canónico</text><rect x="890" y="180" width="330" height="320" rx="16" fill="#FFFFFF" stroke="#E88922" stroke-width="2" filter="url(#shadow)"/>
+<rect x="890" y="180" width="330" height="52" rx="16" fill="#E88922"/>
+<rect x="890" y="218" width="330" height="14" fill="#E88922"/>
+<text x="910" y="213" fill="white" font-family="Arial" font-size="19" font-weight="700">Deduplicación</text>
+<circle cx="915" cy="258" r="4" fill="#E88922"/>
+<text x="930" y="264" fill="#19324D" font-family="Arial" font-size="16">Lead ID</text>
+<circle cx="915" cy="288" r="4" fill="#E88922"/>
+<text x="930" y="294" fill="#19324D" font-family="Arial" font-size="16">Teléfono + email</text>
+<circle cx="915" cy="318" r="4" fill="#E88922"/>
+<text x="930" y="324" fill="#19324D" font-family="Arial" font-size="16">Reglas de similitud</text>
+<circle cx="915" cy="348" r="4" fill="#E88922"/>
+<text x="930" y="354" fill="#19324D" font-family="Arial" font-size="16">Registro maestro</text><rect x="520" y="610" width="560" height="120" rx="14" fill="#FFFFFF" stroke="#159A6C" stroke-width="2" filter="url(#shadow)"/>
+<text x="800.0" y="644" text-anchor="middle" fill="#159A6C" font-family="Arial" font-size="18" font-weight="700">Lead canónico</text>
+<text x="800.0" y="672" text-anchor="middle" fill="#60758A" font-family="Arial" font-size="14">Una representación consistente por lead</text>
+<text x="800.0" y="694" text-anchor="middle" fill="#60758A" font-family="Arial" font-size="14">Campos normalizados y relaciones resueltas</text><line x1="390" y1="340" x2="475" y2="340" stroke="#163A63" stroke-width="3" marker-end="url(#arrow)"/><line x1="805" y1="340" x2="890" y2="340" stroke="#163A63" stroke-width="3" marker-end="url(#arrow)"/><line x1="1055" y1="500" x2="800" y2="610" stroke="#163A63" stroke-width="3" marker-end="url(#arrow)"/></svg>
