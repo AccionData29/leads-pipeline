@@ -159,7 +159,7 @@ class Database:
         for _, r in df.iterrows():
             rows.append({
                 "LeadId": source_id_to_int(r["lead_id"], "LD"),
-                "FechaRegistro": r.get("fecha_registro"),
+                "FechaRegistro": self._utc_datetime(r.get("fecha_registro")),
                 "Canal": str(r.get("canal") or ""),
                 "EmpresaId": source_id_to_int(r.get("empresa_id"), "EMP"),
                 "PuntoVentaId": source_id_to_int(r.get("punto_venta_id"), "PV"),
@@ -169,7 +169,7 @@ class Database:
                 "Ciudad": str(r.get("ciudad") or "") or None,
                 "ModeloInteresTexto": str(r.get("modelo_interes_texto") or "") or None,
                 "EstadoGestion": normalize_status(r.get("estado_gestion")),
-                "FechaPrimerContacto": r.get("fecha_primer_contacto"),
+                "FechaPrimerContacto": self._optional_utc_datetime(r.get("fecha_primer_contacto")),
                 "Campania": str(r.get("campania") or "") or None,
                 "CustomerId": uuid.UUID(str(r["customer_id"])),
                 "TelefonoNormalizado": str(r.get("telefono_normalizado") or "") or None,
@@ -251,6 +251,15 @@ class Database:
         if pd.isna(ts):
             logger.warning("Unparseable date %r; substituting current UTC time", value)
             return datetime.now(timezone.utc)
+        if ts.tzinfo is None:
+            return ts.to_pydatetime().replace(tzinfo=timezone.utc)
+        return ts.to_pydatetime().astimezone(timezone.utc)
+
+    @staticmethod
+    def _optional_utc_datetime(value) -> datetime | None:
+        ts = pd.to_datetime(value, errors="coerce")
+        if pd.isna(ts):
+            return None
         if ts.tzinfo is None:
             return ts.to_pydatetime().replace(tzinfo=timezone.utc)
         return ts.to_pydatetime().astimezone(timezone.utc)
