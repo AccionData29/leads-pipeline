@@ -10,54 +10,66 @@
 <rect width="1600" height="900" fill="#F7F9FC"/>
 <rect x="0" y="0" width="1600" height="92" fill="#163A63"/>
 <text x="55" y="47" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">Despliegue y operación</text>
-<text x="55" y="74" fill="#BBD6EC" font-family="Arial, Helvetica, sans-serif" font-size="15">Entornos reproducibles con Docker Compose y separación por servicio</text>
+<text x="55" y="74" fill="#BBD6EC" font-family="Arial, Helvetica, sans-serif" font-size="15">Railway: un proyecto, 4 servicios en red privada, un único dominio público</text>
+
 <rect x="70" y="170" width="330" height="300" rx="16" fill="#FFFFFF" stroke="#163A63" stroke-width="2" filter="url(#shadow)"/>
 <rect x="70" y="170" width="330" height="52" rx="16" fill="#163A63"/>
 <rect x="70" y="208" width="330" height="14" fill="#163A63"/>
-<text x="90" y="203" fill="white" font-family="Arial" font-size="19" font-weight="700">Docker Compose</text>
+<text x="90" y="203" fill="white" font-family="Arial" font-size="19" font-weight="700">Proyecto Railway</text>
 <circle cx="95" cy="248" r="4" fill="#163A63"/>
-<text x="110" y="254" fill="#19324D" font-family="Arial" font-size="16">Angular / web</text>
+<text x="110" y="254" fill="#19324D" font-family="Arial" font-size="16">frontend (Angular + nginx)</text>
 <circle cx="95" cy="278" r="4" fill="#163A63"/>
-<text x="110" y="284" fill="#19324D" font-family="Arial" font-size="16">Backend .NET</text>
+<text x="110" y="284" fill="#19324D" font-family="Arial" font-size="16">backend (.NET API)</text>
 <circle cx="95" cy="308" r="4" fill="#163A63"/>
-<text x="110" y="314" fill="#19324D" font-family="Arial" font-size="16">Pipeline Python</text>
+<text x="110" y="314" fill="#19324D" font-family="Arial" font-size="16">pipeline (Python API)</text>
 <circle cx="95" cy="338" r="4" fill="#163A63"/>
-<text x="110" y="344" fill="#19324D" font-family="Arial" font-size="16">PostgreSQL</text>
-<circle cx="95" cy="368" r="4" fill="#163A63"/>
-<text x="110" y="374" fill="#19324D" font-family="Arial" font-size="16">Nginx opcional</text><rect x="490" y="170" width="300" height="300" rx="16" fill="#FFFFFF" stroke="#1597D4" stroke-width="2" filter="url(#shadow)"/>
+<text x="110" y="344" fill="#19324D" font-family="Arial" font-size="16">Postgres + volumen /app/data</text>
+
+<rect x="490" y="170" width="300" height="300" rx="16" fill="#FFFFFF" stroke="#1597D4" stroke-width="2" filter="url(#shadow)"/>
 <rect x="490" y="170" width="300" height="52" rx="16" fill="#1597D4"/>
 <rect x="490" y="208" width="300" height="14" fill="#1597D4"/>
-<text x="510" y="203" fill="white" font-family="Arial" font-size="19" font-weight="700">Desarrollo</text>
+<text x="510" y="203" fill="white" font-family="Arial" font-size="19" font-weight="700">Red privada</text>
 <circle cx="515" cy="248" r="4" fill="#1597D4"/>
-<text x="530" y="254" fill="#19324D" font-family="Arial" font-size="16">Variables .env</text>
+<text x="530" y="254" fill="#19324D" font-family="Arial" font-size="16">backend.railway.internal:8080</text>
 <circle cx="515" cy="278" r="4" fill="#1597D4"/>
-<text x="530" y="284" fill="#19324D" font-family="Arial" font-size="16">Datos de prueba</text>
+<text x="530" y="284" fill="#19324D" font-family="Arial" font-size="16">pipeline.railway.internal:8001</text>
 <circle cx="515" cy="308" r="4" fill="#1597D4"/>
-<text x="530" y="314" fill="#19324D" font-family="Arial" font-size="16">Tests</text>
+<text x="530" y="314" fill="#19324D" font-family="Arial" font-size="16">postgres.railway.internal:5432</text>
 <circle cx="515" cy="338" r="4" fill="#1597D4"/>
-<text x="530" y="344" fill="#19324D" font-family="Arial" font-size="16">Logs</text><rect x="880" y="170" width="300" height="300" rx="16" fill="#FFFFFF" stroke="#7357C8" stroke-width="2" filter="url(#shadow)"/>
+<text x="530" y="344" fill="#19324D" font-family="Arial" font-size="16">Sin dominio público</text>
+
+<rect x="880" y="170" width="300" height="300" rx="16" fill="#FFFFFF" stroke="#7357C8" stroke-width="2" filter="url(#shadow)"/>
 <rect x="880" y="170" width="300" height="52" rx="16" fill="#7357C8"/>
 <rect x="880" y="208" width="300" height="14" fill="#7357C8"/>
-<text x="900" y="203" fill="white" font-family="Arial" font-size="19" font-weight="700">Staging</text>
+<text x="900" y="203" fill="white" font-family="Arial" font-size="19" font-weight="700">Dominio público</text>
 <circle cx="905" cy="248" r="4" fill="#7357C8"/>
-<text x="920" y="254" fill="#19324D" font-family="Arial" font-size="16">Datos controlados</text>
+<text x="920" y="254" fill="#19324D" font-family="Arial" font-size="16">*.up.railway.app (frontend)</text>
 <circle cx="905" cy="278" r="4" fill="#7357C8"/>
-<text x="920" y="284" fill="#19324D" font-family="Arial" font-size="16">Integración E2E</text>
+<text x="920" y="284" fill="#19324D" font-family="Arial" font-size="16">nginx proxy_pass /api/ →</text>
 <circle cx="905" cy="308" r="4" fill="#7357C8"/>
-<text x="920" y="314" fill="#19324D" font-family="Arial" font-size="16">Validación</text>
+<text x="920" y="314" fill="#19324D" font-family="Arial" font-size="16">backend por red privada</text>
 <circle cx="905" cy="338" r="4" fill="#7357C8"/>
-<text x="920" y="344" fill="#19324D" font-family="Arial" font-size="16">Smoke tests</text><rect x="1270" y="170" width="260" height="300" rx="16" fill="#FFFFFF" stroke="#159A6C" stroke-width="2" filter="url(#shadow)"/>
+<text x="920" y="344" fill="#19324D" font-family="Arial" font-size="16">Única puerta de entrada</text>
+
+<rect x="1270" y="170" width="260" height="300" rx="16" fill="#FFFFFF" stroke="#159A6C" stroke-width="2" filter="url(#shadow)"/>
 <rect x="1270" y="170" width="260" height="52" rx="16" fill="#159A6C"/>
 <rect x="1270" y="208" width="260" height="14" fill="#159A6C"/>
-<text x="1290" y="203" fill="white" font-family="Arial" font-size="19" font-weight="700">Producción</text>
+<text x="1290" y="203" fill="white" font-family="Arial" font-size="19" font-weight="700">Secretos</text>
 <circle cx="1295" cy="248" r="4" fill="#159A6C"/>
-<text x="1310" y="254" fill="#19324D" font-family="Arial" font-size="16">Secretos seguros</text>
+<text x="1310" y="254" fill="#19324D" font-family="Arial" font-size="16">Variables por servicio</text>
 <circle cx="1295" cy="278" r="4" fill="#159A6C"/>
-<text x="1310" y="284" fill="#19324D" font-family="Arial" font-size="16">Migraciones</text>
+<text x="1310" y="284" fill="#19324D" font-family="Arial" font-size="16">${{Postgres.PGPASSWORD}}</text>
 <circle cx="1295" cy="308" r="4" fill="#159A6C"/>
-<text x="1310" y="314" fill="#19324D" font-family="Arial" font-size="16">Monitoreo</text>
+<text x="1310" y="314" fill="#19324D" font-family="Arial" font-size="16">Nunca en código/appsettings</text>
 <circle cx="1295" cy="338" r="4" fill="#159A6C"/>
-<text x="1310" y="344" fill="#19324D" font-family="Arial" font-size="16">Backups</text><line x1="400" y1="320" x2="490" y2="320" stroke="#163A63" stroke-width="3" marker-end="url(#arrow)"/><line x1="790" y1="320" x2="880" y2="320" stroke="#163A63" stroke-width="3" marker-end="url(#arrow)"/><line x1="1180" y1="320" x2="1270" y2="320" stroke="#163A63" stroke-width="3" marker-end="url(#arrow)"/><rect x="470" y="590" width="760" height="120" rx="14" fill="#FFFFFF" stroke="#1976D2" stroke-width="2" filter="url(#shadow)"/>
-<text x="850.0" y="624" text-anchor="middle" fill="#1976D2" font-family="Arial" font-size="18" font-weight="700">CI/CD</text>
-<text x="850.0" y="652" text-anchor="middle" fill="#60758A" font-family="Arial" font-size="14">Lint + tests → build → validación → despliegue controlado</text>
-<text x="850.0" y="674" text-anchor="middle" fill="#60758A" font-family="Arial" font-size="14">Las migraciones productivas se gestionan desde .NET / EF Core.</text></svg>
+<text x="1310" y="344" fill="#19324D" font-family="Arial" font-size="16">Migraciones EF Core manuales</text>
+
+<line x1="400" y1="320" x2="490" y2="320" stroke="#163A63" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="790" y1="320" x2="880" y2="320" stroke="#163A63" stroke-width="3" marker-end="url(#arrow)"/>
+<line x1="1180" y1="320" x2="1270" y2="320" stroke="#163A63" stroke-width="3" marker-end="url(#arrow)"/>
+
+<rect x="470" y="590" width="760" height="120" rx="14" fill="#FFFFFF" stroke="#1976D2" stroke-width="2" filter="url(#shadow)"/>
+<text x="850.0" y="624" text-anchor="middle" fill="#1976D2" font-family="Arial" font-size="18" font-weight="700">Despliegue actual</text>
+<text x="850.0" y="652" text-anchor="middle" fill="#60758A" font-family="Arial" font-size="14">`railway up` por servicio (build desde Dockerfile) — sin CI/CD automático todavía</text>
+<text x="850.0" y="674" text-anchor="middle" fill="#60758A" font-family="Arial" font-size="14">Siguiente paso: conectar cada servicio a su repo de GitHub para redeploy en cada push</text>
+</svg>
