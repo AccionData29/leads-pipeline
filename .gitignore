@@ -1,0 +1,26 @@
+# Secrets / configuración local
+.env
+!.env.example
+
+# Entornos virtuales
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Datos de negocio y PII de clientes (nombres, teléfonos, correos, conversaciones).
+# El pipeline los lee/escribe en disco localmente; nunca deben ir al control de versiones.
+/data/
+/leads.csv
+/asesores.csv
+/catalogo_motos.csv
+/historico_cierres.csv
+/conversaciones.json
+
+# Artefactos de build
+dist/
+build/

@@ -21,4 +21,4 @@ class MockEnricher(Enricher):
                 except: pass
             if vals: initial=max(vals)
         confidence=.75 if model or payment or intent else .55
-        return LeadEnrichment(lead_id, model, initial if "inicial" in t or "inicial" in t else None, payment, intent, objection, cita, quote, confidence, "mock", None, "1.0")
+        return LeadEnrichment(lead_id, model, initial, payment, intent, objection, cita, quote, confidence, "mock", None, "1.0")

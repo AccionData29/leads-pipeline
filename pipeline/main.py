@@ -19,8 +19,8 @@ def prepare_raw(source_dir: Path):
         if not src.exists(): raise FileNotFoundError(src)
         shutil.copy2(src,settings.raw_dir/name)
 
-def run(init_db=False, source_dir=None, no_db=False):
-    run_uuid=uuid.uuid4()
+def run(init_db=False, source_dir=None, no_db=False, run_id=None):
+    run_uuid=run_id or uuid.uuid4()
     run_id=run_uuid.hex[:12]
     started=datetime.now(timezone.utc)
     source_dir=Path(source_dir) if source_dir else settings.raw_dir
@@ -47,8 +47,8 @@ def run(init_db=False, source_dir=None, no_db=False):
     leads["requested_quote"]=leads["requested_quote"].apply(lambda v: False if pd.isna(v) else bool(v))
     # Historical model
     model_path=settings.output_dir/"scoring_model.joblib"
-    _, train_metrics=train(history,model_path)
-    scored=score_current(leads,history,model_path)
+    pipe, train_metrics=train(history,model_path)
+    scored=score_current(leads,history,model_path,pipe=pipe)
     scored=scored.merge(leads[["lead_id","empresa_id","punto_venta_id"]],on="lead_id",how="left")
     # simple business explanations, deterministic and transparent
     reasons=[]

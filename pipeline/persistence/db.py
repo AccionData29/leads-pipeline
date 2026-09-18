@@ -249,6 +249,7 @@ class Database:
     def _utc_datetime(value) -> datetime:
         ts = pd.to_datetime(value, errors="coerce")
         if pd.isna(ts):
+            logger.warning("Unparseable date %r; substituting current UTC time", value)
             return datetime.now(timezone.utc)
         if ts.tzinfo is None:
             return ts.to_pydatetime().replace(tzinfo=timezone.utc)

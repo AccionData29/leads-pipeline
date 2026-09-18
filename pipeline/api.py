@@ -2,7 +2,6 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
 from uuid import UUID, uuid4
-import os
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
@@ -20,6 +19,23 @@ class RunRequest(BaseModel):
 class RunResponse(BaseModel):
     run_id: UUID
     status: str
+
+
+def _resolve_source_dir(source_dir: str | None) -> str | None:
+    """Confine an API-supplied source_dir to settings.data_dir.
+
+    source_dir comes from an untrusted HTTP request body; without this check
+    a caller could point the pipeline at any readable directory on the host
+    (path traversal / arbitrary local file read) via prepare_raw()'s copy.
+    """
+    if source_dir is None:
+        return None
+    base = settings.data_dir.resolve()
+    candidate = Path(source_dir)
+    candidate = candidate.resolve() if candidate.is_absolute() else (base / candidate).resolve()
+    if candidate != base and base not in candidate.parents:
+        raise ValueError("source_dir must be inside the configured data directory")
+    return str(candidate)
 
 
 def _execute(run_id: UUID, source_dir: str | None):
@@ -42,6 +58,10 @@ def health():
 
 @app.post("/api/v1/pipeline/runs", response_model=RunResponse, status_code=202)
 def start_pipeline(request: RunRequest):
+    try:
+        source_dir = _resolve_source_dir(request.source_dir)
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc))
     run_id = uuid4()
     try:
         Database().save_run({
@@ -51,5 +71,5 @@ def start_pipeline(request: RunRequest):
         })
     except Exception as exc:
         raise HTTPException(status_code=503, detail=f"Database unavailable: {exc}")
-    _executor.submit(_execute, run_id, request.source_dir)
+    _executor.submit(_execute, run_id, source_dir)
     return RunResponse(run_id=run_id, status="RUNNING")

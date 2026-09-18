@@ -35,8 +35,8 @@ def train(history: pd.DataFrame, model_path: Path):
     (model_path.parent/"metrics.json").write_text(json.dumps(metrics,indent=2),encoding="utf-8")
     return pipe,metrics
 
-def score_current(leads, history, model_path: Path):
-    pipe=load(model_path) if model_path.exists() else train(history,model_path)[0]
+def score_current(leads, history, model_path: Path, pipe=None):
+    pipe=pipe or (load(model_path) if model_path.exists() else train(history,model_path)[0])
     x=leads.copy()
     now=pd.Timestamp.now()
     x["horas_al_primer_contacto"]=((now-x["fecha_registro_normalizada"]).dt.total_seconds()/3600).clip(lower=0)

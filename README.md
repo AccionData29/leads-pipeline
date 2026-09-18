@@ -77,6 +77,13 @@ El mismo entrypoint es ejecutable desde cron, GitHub Actions, un scheduler o un 
 La siguiente iteración deberá agregar un repositorio de upsert por clave natural, checksum de archivos y control de `pipeline_runs` para impedir duplicados entre ejecuciones. Para el assessment se dejan artefactos por `run_id` y el pipeline es reproducible.
 
 
+## Seguridad / datos sensibles
+
+- `.env` nunca se commitea (ver `.gitignore`). Copie `.env.example` y complete sus propios valores locales.
+- `data/`, y los CSV/JSON de origen (`leads.csv`, `asesores.csv`, `conversaciones.json`, `historico_cierres.csv`) contienen PII real de clientes (nombres, teléfonos, correos) y están excluidos del repositorio. Colóquelos localmente; nunca los commitee.
+- Si una credencial llegó a subirse a git (aunque sea en un commit anterior), rótela en el motor de base de datos: quitarla del working tree no la invalida, sigue en el historial hasta que se reescriba explícitamente y se cambie la contraseña.
+- `POST /api/v1/pipeline/runs` no tiene autenticación en este código base; si se expone fuera de una red de confianza, añada autenticación (API key, mTLS, red privada) antes de desplegarlo.
+
 ## PostgreSQL / .NET contract alignment
 
 The shared PostgreSQL schema is owned by the .NET backend and EF Core migrations. The Python pipeline does not create or alter the shared schema. Run the backend migrations first, then execute the pipeline.

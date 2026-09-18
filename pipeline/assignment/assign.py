@@ -6,7 +6,6 @@ def assign_leads(scored, advisors, today=None):
     adv=advisors[(advisors["activo_bool"]) & (advisors["capacidad_diaria_leads"]>0)].copy()
     scored=scored.sort_values(["priority","score"],ascending=[True,False],key=lambda s: s.map({"HIGH":0,"MEDIUM":1,"LOW":2}) if s.name=="priority" else s).copy()
     assignments=[]; counters={a:0 for a in adv["asesor_id"]}
-    grouped=adv.groupby(["empresa_id","punto_venta_id"])
     for _,lead in scored.iterrows():
         candidates=adv[(adv["empresa_id"]==lead["empresa_id"]) & (adv["punto_venta_id"]==lead["punto_venta_id"]) & (adv["capacidad_diaria_leads"]>adv["asesor_id"].map(counters))]
         if candidates.empty: continue
